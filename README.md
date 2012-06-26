@@ -6,8 +6,8 @@ html5 cuepoints
 
 example:
 	
-	
-	
+-- kuepoints can be added in any order as they are sorted	
+-- time is in seconds	
 	
 	var video = document.getElementsByTagName("video")[0];
 	
@@ -33,4 +33,3 @@ example:
 	});
 	
 	
-	//kuepoints can be added in any order as they are sorted
