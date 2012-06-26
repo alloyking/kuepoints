@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>kuepoints</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/kuepoints.js"></script>
+
+</head>
+
+
+<script>
+$(document).ready(function() {
+  init();
+});
+
+
+function init(){
+		
+	var video = document.getElementsByTagName("video")[0];
+	
+	
+	//init the kuepoints
+	var kuepoints = $.fn.KuePoints(video);
+		
+	
+	//add a single cuepoint
+	kuepoints.addListener('5',function(){
+	 alert('do something');
+	});
+
+	// add cuepoints in an array
+	kueArray = [20,25];
+	kuepoints.addListener(kueArray,function(){
+	 alert('do something else');
+	});
+	
+	//add cuepoints in a string
+	kuepoints.addListener('10,15,30',function(){
+	 alert('do something really crazy');
+	});
+	
+	
+};//int()
+</script>
+
+<body>
+
+<video id="video" src="http://www.morsekode.com/workspace/uploads/people/videos/nick.mp4" type="video/mp4" controls>  
+  Your browser does not support the <code>video</code> element.   
+</video> 
+
+
+</body>
+</html>
+
